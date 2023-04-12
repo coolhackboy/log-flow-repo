@@ -8,10 +8,12 @@ version: 18823f331b7660ead0d2c8485e4906f7
 work_queue_name: default
 work_pool_name: null
 tags: []
-parameters: {}
+parameters: {'name': 'Marvin'}
 schedule: null
 is_schedule_active: null
-infra_overrides: {}
+infra_overrides:
+  env:
+    PREFECT_LOGGING_LEVEL: DEBUG
 infrastructure:
   type: process
   env: {}
