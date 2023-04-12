@@ -1,0 +1,66 @@
+###
+### A complete description of a Prefect Deployment for flow 'log-flow'
+###
+name: log-flow-repo
+description: null
+version: 18823f331b7660ead0d2c8485e4906f7
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: default-agent-pool
+tags: []
+parameters: {}
+schedule: null
+is_schedule_active: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: log-flow
+manifest_path: null
+infrastructure:
+  type: docker-container
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  image: prefecthq/prefect:2.10.3-python3.11
+  image_pull_policy: null
+  image_registry: null
+  networks: []
+  network_mode: null
+  auto_remove: false
+  volumes: []
+  stream_output: true
+  memswap_limit: null
+  mem_limit: null
+  privileged: false
+  _block_document_id: 4c8f136b-e63a-4c2b-b0f4-b362f566f38f
+  _block_document_name: log-tutorial
+  _is_anonymous: false
+  block_type_slug: docker-container
+  _block_type_slug: docker-container
+storage:
+  repository: https://github.com/coolhackboy/log-flow-repo.git
+  reference: null
+  access_token: null
+  include_git_objects: true
+  _block_document_id: 48549275-26e7-4d18-b8b4-361c07ab78cb
+  _block_document_name: log-flow-repo
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: log_flow.py:log_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties:
+    name:
+      title: name
+      position: 0
+      type: string
+  required:
+  - name
+  definitions: null
+timestamp: '2023-04-12T09:42:27.399394+00:00'
